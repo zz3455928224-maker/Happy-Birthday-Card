@@ -1,0 +1,4 @@
+{
+  "buildCommand": "echo 'Using prebuilt birthday site'",
+  "outputDirectory": "birthday-final-v4"
+}
