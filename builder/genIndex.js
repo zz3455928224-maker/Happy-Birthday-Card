@@ -10,7 +10,10 @@ const genIndex = function (markup) {
     readVar = "";
 
   if (markup.length) {
-    readTime = (markup.split(" ").length / 200) * 60;
+    const plainText = markup.replace(/<[^>]+>/g, "");
+    const chineseChars = (plainText.match(/[\u3400-\u9fff]/g) || []).length;
+    const latinWords = (plainText.match(/[A-Za-z0-9]+/g) || []).length;
+    readTime = Math.max(45, (chineseChars / 360) * 60 + (latinWords / 200) * 60);
     readVar = `<style>:root{
       --readTime: ${Math.round(readTime) + 15}s;
     }</style>`;
@@ -21,7 +24,7 @@ const genIndex = function (markup) {
     .replace("{{^SCROLL_MSG}}", markup)
     .replace(
       "{{^HBD_MSG}}",
-      process.env.HBD_MSG || "Wish you a very Happy Birthday"
+      process.env.HBD_MSG || "生日快乐，愿你永远被爱与好运包围"
     )
     .replace("{{^NAME}}", process.env.NAME)
     .replace("{{^NICKNAME}}", process.env.NICKNAME || process.env.NAME);

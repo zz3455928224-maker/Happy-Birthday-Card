@@ -70,7 +70,7 @@
 
 .img-back {
   position: relative;
-  background-color: #ffa8dc;
+  background: linear-gradient(145deg, #ffbfdc, #b89cff);
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
@@ -130,6 +130,8 @@
 .HBD {
   font-size: 2.4rem;
   padding: 0;
+  font-family: "Ma Shan Zheng", cursive;
+  letter-spacing: 0.08em;
 
   @media (max-width: 800px) {
     font-size: 3.4rem;
@@ -143,6 +145,8 @@
 .nickname {
   font-size: 3.2rem;
   padding: 0;
+  color: #ffd7e8;
+  font-family: "Ma Shan Zheng", cursive;
 
   @media (max-width: 800px) {
     font-size: 4.2rem;
@@ -201,6 +205,8 @@
   color: #fff;
   display: none;
   font-size: 1.8rem;
+  letter-spacing: 0.18em;
+  font-weight: 600;
 }
 
 .switch {
@@ -230,7 +236,7 @@
 }
 
 .darkroom {
-  background-color: #000;
+  background: radial-gradient(circle at 50% 35%, #211633 0%, #0a0812 52%, #030306 100%);
 }
 
 .flash {
@@ -239,7 +245,7 @@
 
 .giftroom,
 .empty-room {
-  background-color: #141852;
+  background-color: #17142d;
 }
 
 .hallway {
@@ -275,6 +281,14 @@
   width: 80vw;
   opacity: 0;
   font-size: 3.2rem;
+  line-height: 1.7;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+}
+
+.name {
+  color: #ffb7d4;
+  font-family: "Ma Shan Zheng", cursive;
+  font-size: 1.18em;
 }
 
 // CANDLE -> https://codepen.io/rizqyhi/pen/BsAFn
